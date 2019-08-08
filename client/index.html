@@ -21,7 +21,7 @@
 <body>
 
     <!-- =========== NAVBAR ============ -->
-    <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between fixed-top">
         <div class="brander d-flex col-2 align-items-center col">
             <img src="./static/logo.png" alt="logo" class="brand-logo">
             <a class="navbar-brand" href="#">Movees</a>
@@ -41,20 +41,24 @@
     <div class="container-fluid">
         <!-- ============ LOGIN ============= -->
         <div class="row landing-page justify-content-center">
-            <div class="brand-banner col-6">brand</div>
+            <div class="brand-banner col-6">
+                <div class="banner-layer d-flex justify-content-center align-items-center">
+                    <img src="./static/logo.png" alt="">
+                </div>
+            </div>
             <div class="user-gate col-6 d-flex flex-column align-items-center">
                 <h3 class="text-signin">Sign In</h3>
 
                 <!-- =========== SIGNIN MODAL ============= -->
                 <form class="d-flex flex-column form-signin">
-                    <input type="text" name="email" id="email" placeholder="Input your email" required>
-                    <input type="password" name="password" id="password" placeholder="Input your password" required>
+                    <input type="text" name="email" id="email" placeholder="Input your email ..." required>
+                    <input type="password" name="password" id="password" placeholder="Input your password ..." required>
                     <button type="submit" href="" class="btn btn-primary">Sign In</button><br>
                 </form>
                 <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a>
 
                 <!-- =========== REGISTER MODAL ============= -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                <div class="modal signup fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">

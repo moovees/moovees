@@ -3,12 +3,13 @@ body {
 }
 
 nav {
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(31, 31, 31);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.795);
 }
 
 nav a {
     color: white;
-    font-family: 'Oswald'
+    font-family: 'Lobster'
 }
 
 .brand-logo {
@@ -22,7 +23,7 @@ nav a {
 .container-fluid {
     margin-top: 20px;
     padding: 0 100px;
-
+    margin-top: 100px;
 }
 
 /* -------------------------------------------------------------- iframe */
@@ -42,18 +43,31 @@ nav a {
 }
 
 .landing-page {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.52);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.623);
     animation: fadein 2s;
     border-radius: 7px;
 }
 
 .brand-banner {
-    background-color: rgb(46, 46, 46);
+    background-image: url('../static/banner-bg.jpg');
+    background-size: cover;
+    border-radius: 7px 0 0 7px;
+    padding: 0;
+}
+
+.banner-layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
     border-radius: 7px 0 0 7px;
 }
 
+.banner-layer img {
+    width: 40%;
+}
+
 .user-gate {
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(224, 224, 221);
     padding: 40px;
     border-radius: 0 7px 7px 0;
 }
@@ -62,8 +76,13 @@ nav a {
     border: none;
     background-color: transparent;
     outline: none;
-    border-bottom: 1px solid rgb(151, 151, 151);
+    border-bottom: 1px solid rgb(109, 108, 108);
     margin-bottom: 10px;
+    font-family: 'Oswald'
+}
+
+.form-signin {
+    width: 100%;
 }
 
 .form-signup input {
@@ -75,5 +94,21 @@ nav a {
 }
 
 .landing-page h3 {
-    font-family: 'Oswald'
+    font-family: 'Oswald';
+    margin-bottom: 50px;
+    font-size: 40px;
 }
+
+.form-signin button {
+    margin-top: 20px;
+    background-color: #ecd800;
+    border: #615a0c;
+    color: rgb(255, 255, 255)
+}
+
+.landing-page h4 {
+    font-family: 'Oswald';
+    font-size: 20px;
+}
+
+.signup h5 {}
