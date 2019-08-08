@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- google client -->
+    <meta name="google-signin-client_id"
+        content="800616839115-v04olo2jcipsoicrkasli0lpd603qnsn.apps.googleusercontent.com">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <title>APPS</title>
+</head>
+
+<body>
+
+    <!-- =========== NAVBAR ============ -->
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+        <div class="brander d-flex col-2 align-items-center col">
+            <img src="./static/react.svg" alt="logo" class="brand-logo">
+            <a class="navbar-brand" href="#">My Apps</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent col">
+            <ul class="navbar-nav mr-auto">
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+
+        <div class="logout col">
+            <a id="signout" href="#" onclick="signOut();" style="display: none">Sign out</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <!-- ============ LOGIN ============= -->
+        <div class="row landing-page justify-content-center">
+            <div class="brand-banner col-6">brand</div>
+            <div class="user-gate col-6 d-flex flex-column align-items-center">
+                <h1 class="welcome-register">My APPS</h1>
+                <h3 class="text-signin">Sign In</h3>
+                <form class="d-flex flex-column form-signin">
+                    <input type="text" name="email" id="email" placeholder="Input your email" required>
+                    <input type="password" name="password" id="password" placeholder="Input your password" required>
+                    <button type="submit" href="" class="btn btn-primary">Sign In</button><br>
+                </form>
+                <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a>
+
+                <!-- =========== REGISTER MODAL ============= -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form class="form-signup">
+                                <div class="modal-body d-flex flex-column">
+                                    <input type="text" placeholder="name..." required>
+                                    <input type="text" placeholder="email..." required>
+                                    <input type="password" placeholder="password..." required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h4>Sign in with Google Account</h4>
+                <div class="g-signin2 signin" data-onsuccess="onSignIn"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- google sign in -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="./js/googleSign.js"></script>
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <!-- js -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
