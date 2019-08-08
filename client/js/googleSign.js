@@ -14,7 +14,6 @@ function onSignIn(googleUser) {
                 Swal.fire({
                     type: 'success',
                     title: 'Login success!',
-                    text: 'Please login to continue :D',
                     timer: 1500
                 })
             }
@@ -38,7 +37,7 @@ function signOut() {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Yes, log me out!'
     }).then((result) => {
         if (result.value) {
             Swal.fire(
