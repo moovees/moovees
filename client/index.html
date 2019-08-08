@@ -45,6 +45,8 @@
             <div class="user-gate col-6 d-flex flex-column align-items-center">
                 <h1 class="welcome-register">My APPS</h1>
                 <h3 class="text-signin">Sign In</h3>
+
+                <!-- =========== SIGNIN MODAL ============= -->
                 <form class="d-flex flex-column form-signin">
                     <input type="text" name="email" id="email" placeholder="Input your email" required>
                     <input type="password" name="password" id="password" placeholder="Input your password" required>
@@ -65,9 +67,9 @@
                             </div>
                             <form class="form-signup">
                                 <div class="modal-body d-flex flex-column">
-                                    <input type="text" placeholder="name..." required>
-                                    <input type="text" placeholder="email..." required>
-                                    <input type="password" placeholder="password..." required>
+                                    <input type="text" placeholder="name..." required id="name-signup">
+                                    <input type="text" placeholder="email..." required id="email-signup">
+                                    <input type="password" placeholder="password..." required id="password-signup">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -84,29 +86,27 @@
         </div>
 
 
-
     </div>
 
 
-
     <!-- script -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- google sign in -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="./js/googleSign.js"></script>
     <!-- sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <!-- notifyjs -->
+    <script src="./js/notify .js"></script>
     <!-- js -->
     <script src="./js/main.js"></script>
 </body>
