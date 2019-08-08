@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/tmdb.css" type="text/css">
     <title>APPS</title>
 </head>
 
@@ -38,9 +40,9 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <!-- <div class="container-fluid"> -->
         <!-- ============ LOGIN ============= -->
-        <div class="row landing-page justify-content-center">
+        <!-- <div class="row landing-page justify-content-center">
             <div class="brand-banner col-6">brand</div>
             <div class="user-gate col-6 d-flex flex-column align-items-center">
                 <h1 class="welcome-register">My APPS</h1>
@@ -50,10 +52,10 @@
                     <input type="password" name="password" id="password" placeholder="Input your password" required>
                     <button type="submit" href="" class="btn btn-primary">Sign In</button><br>
                 </form>
-                <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a>
+                <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a> -->
 
                 <!-- =========== REGISTER MODAL ============= -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -85,7 +87,50 @@
 
 
 
-    </div>
+    </div> -->
+
+
+
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 left-side">
+						<div id="top-side">
+							<div id="head-box">
+								<div id="bookmark-icon">
+									<i class="material-icons bookmark">bookmark</i>
+									<i class="material-icons plus">add</i>
+								</div>
+								<div id="title-and-desc">
+									<h1>How to make a title</h1>
+									<p>TV-MA | 9h 54min | Action, Drama, History | TV-Mini-Series</p>
+								</div>
+								<div id="rating">
+									<div id="star">
+										<i style="font-size: 45px; color: #e4bb24" class="material-icons">star</i>
+										<div id="star-detail">
+											<h3>9.5<span>/10</span></h3>
+											<p>30.000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="poster">
+								<img src="https://image.tmdb.org/t/p/original//keym7MPn1icW1wWfzMnW3HeuzWU.jpg" alt="poster">
+							</div>
+						</div>
+						<div id="bottom-side">
+
+						</div>
+					</div>
+					<div class="col-md-4 right-side">
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+
 
 
 
@@ -109,6 +154,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <!-- js -->
     <script src="./js/main.js"></script>
+    <script src="js/tmdb.js"></script>
 </body>
 
 </html>
