@@ -39,7 +39,17 @@ class TmdbController {
     })
   }
 
-  
+  static getTopRated(req, res, next) {
+    params.page = req.params.page;
+    axios.get('https://api.themoviedb.org/3/movie/popular', { params })
+    .then((response) => {
+      res.send(response.data.results)
+    })
+    .catch((err) => {
+      res.send(err);
+      console.log(err);
+    })
+  }
 }
 
 module.exports = TmdbController
