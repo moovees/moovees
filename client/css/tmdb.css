@@ -62,8 +62,15 @@ body {
 }
 
 #title-and-desc {
-  /* position: relative; */
+  position: relative;
   flex-direction: row;
+  max-height: 90px;
+  max-width: 550px;
+  overflow: hidden;
+}
+
+#title-and-desc h1 {
+  font-size: 1.7vw;
 }
 
 #title-and-desc p {
