@@ -12,6 +12,10 @@ nav a {
     font-family: 'Lobster'
 }
 
+.brander a {
+    font-size: 25px;
+}
+
 .brand-logo {
     width: 40px;
     margin-right: 20px;
