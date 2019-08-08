@@ -35,12 +35,12 @@ function signin() {
                 localStorage.setItem('token', response)
 
                 $('#signout').show()
-                $.notify("Hello World");
+
                 Swal.fire({
                     type: 'success',
                     title: 'Login success!',
                     text: 'Please login to continue :D',
-                    width: '200'
+                    timer: 1500
                 })
             })
             .fail(err => {
