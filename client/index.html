@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/tmdb.css" type="text/css">
     <title>APPS</title>
 </head>
 
@@ -27,7 +29,9 @@
         <div class="brander d-flex col-2 align-items-center col">
             <img src="./static/react.svg" alt="logo" class="brand-logo">
             <a class="navbar-brand" href="#">My Apps</a>
-        </div>
+				</div>
+				
+				<button class="btn btn-outline-primary btn-sm">Get Popular</button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent col">
             <ul class="navbar-nav mr-auto">
@@ -40,9 +44,9 @@
         </div>
     </nav>
 
-    <div class="container-fluid mt-0">
+    <!-- <div class="container-fluid"> -->
         <!-- ============ LOGIN ============= -->
-        <div hidden class="row landing-page justify-content-center">
+        <!-- <div class="row landing-page justify-content-center">
             <div class="brand-banner col-6">brand</div>
             <div class="user-gate col-6 d-flex flex-column align-items-center">
                 <h1 class="welcome-register">My APPS</h1>
@@ -52,10 +56,10 @@
                     <input type="password" name="password" id="password" placeholder="Input your password" required>
                     <button type="submit" href="" class="btn btn-primary">Sign In</button><br>
                 </form>
-                <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a>
+                <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a> -->
 
                 <!-- =========== REGISTER MODAL ============= -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -136,7 +140,80 @@
                 </div>
             </div>
 
-    </div>
+    </div> -->
+
+
+
+	<section id="popular">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 left-side">
+					<h4>Moovees Charts</h4>
+					<h1>Most Popular Movies</h1>
+					<p>As determined by Moovees</p>
+					<div id="box-table">
+
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Rank & Title</th>
+									<th>Rating</th>
+								</tr>
+							</thead>
+							<tbody>
+									
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-4 right-side">
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+		<!-- <section id="details">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 left-side">
+						<div id="top-side">
+							<div id="head-box">
+								<div id="bookmark-icon">
+									<i class="material-icons bookmark">bookmark</i>
+									<i class="material-icons plus">add</i>
+								</div>
+								<div id="title-and-desc">
+									<h1></h1>
+									<p></p>
+								</div>
+								<div id="rating">
+									<div id="star">
+										<i style="font-size: 45px; color: #e4bb24" class="material-icons">star</i>
+										<div id="star-detail">
+											<h3></h3>
+											<p></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="poster">
+								<img src="" alt="poster">
+							</div>
+						</div>
+						<div id="bottom-side">
+
+						</div>
+					</div>
+					<div class="col-md-4 right-side">
+
+					</div>
+				</div>
+			</div>
+
+		</section> -->
+
 
 
 
@@ -160,6 +237,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <!-- js -->
     <script src="./js/main.js"></script>
+    <script src="js/tmdb.js"></script>
 </body>
 
 </html>
