@@ -55,6 +55,7 @@ function signOut() {
 
             $('.homepage').hide()
             $('#signout').hide()
+            $('#details').hide()
 
             localStorage.clear()
         }

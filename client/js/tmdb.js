@@ -1,5 +1,5 @@
 function showDetail(temp_id) {
-
+  $('#movie-rec').empty()
   $('#details').show();
   $('.spinner-poster-detail').show()
 
@@ -11,11 +11,11 @@ function showDetail(temp_id) {
       url: `http://localhost:3000/tmdb/${temp_id}`
     })
     .done((res) => {
-
+      getRecommendation(res.title)
       $('.spinner-poster-detail').hide()
 
       $('#detail-desc').show()
-      $('#poster-image').show()
+      
 
 
       $('#title-and-desc h1').text(res.title)
@@ -33,6 +33,8 @@ function showDetail(temp_id) {
       $('#star-detail h3').html(res.vote_average + '<span>/10</span>');
       $('#star-detail p').text(res.vote_count + ' votes');
       $('#poster img').attr("src", `https://image.tmdb.org/t/p/original/${res.poster_path}`);
+      
+      $('#poster-image').show()
       $('#bottom-side').empty().append(
         `
       <p id="detail-desc">${res.overview}</p>
@@ -99,6 +101,38 @@ function seeMorePopular() {
         showDetail(temp_id)
       })
     })
+}
+
+function getRecommendation(title) {
+  let new_title = title.split(':')[0]
+  $.ajax({
+      method: 'GET',
+      url: `http://localhost:3000/taste-dive?title=${new_title}`
+    })
+    .done(response => {
+      $('#movie-rec').empty()
+      for (let i = 0; i < 10; i++) {
+        let movie = response.Similar.Results[i].Name
+
+        $('#movie-rec').append(`
+          <li class="nav-item" onclick="getMovieFromRec('${movie}')">
+              <a class="nav-link" href="#">${movie}</a>
+          </li>
+          `)
+      }
+    })
+    .fail(err => console.log(err))
+}
+
+function getMovieFromRec(title) {
+  $.ajax({
+      method: 'GET',
+      url: `http://localhost:3000/tmdb/search/movie?query=${title}`
+    })
+    .done(movieId => {
+      showDetail(movieId)
+    })
+    .fail(err => console.log(err))
 }
 
 $(document).ready(() => {
@@ -173,9 +207,9 @@ $(document).ready(() => {
         showDetail(temp_id)
       })
 
+      $('#detail-movies').empty()
       for (let i = 3; i < 7; i++) {
         let movie = response[i]
-
 
         // $.ajax({
         //     method: 'get',
@@ -183,7 +217,7 @@ $(document).ready(() => {
         //   })
         //   .done(movieId => {
         //     console.log(movieId)
-        //     $('#detail-movies').empty().append(
+        //     $('#detail-movies').append(
         //       `<div class="p-3 border-bottom">
         //                   <h3>${movie.title}</h3>
         //                   <iframe width="420" height="315"
@@ -197,6 +231,7 @@ $(document).ready(() => {
         //   .fail(err => {
         //     console.log(err)
         //   })
+
       }
     })
     .fail(err => console.log(err))

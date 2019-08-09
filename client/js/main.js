@@ -105,6 +105,6 @@ function goHome() {
         $('.homepage').show()
         
         $('#details').hide()
-
+        $('#popular').hide()
     })
 }
