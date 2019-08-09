@@ -35,10 +35,11 @@ $(document).ready(() => {
           <td>
             <div id="rank-title">
               <div id="thumbnail">
+                <img src="https://image.tmdb.org/t/p/original/${res.results[i].poster_path}" alt="">
               </div>
               <div id="number-title">
                 <p>${i + 1}. </p>
-                <a href="https://image.tmdb.org/t/p/original/">some title</a>
+                <a href="">some title</a>
               </div>
             </div>
           </td>
@@ -50,11 +51,6 @@ $(document).ready(() => {
           </td>
         </tr>`
         $('.table > tbody:last-child').append(html);
-        if (res.results[i]) {
-          console.log(res.results[i]);
-        } else {
-          console.log('kosong');
-        }
       }
     }
   })
