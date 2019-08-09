@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- google client -->
+    <meta name="google-signin-client_id"
+        content="800616839115-v04olo2jcipsoicrkasli0lpd603qnsn.apps.googleusercontent.com">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/tmdb.css" type="text/css">
+    <title>APPS</title>
+</head>
+
+<body>
+
+    <!-- =========== NAVBAR ============ -->
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between fixed-top">
+        <div class="brander d-flex col-2 align-items-center col">
+            <img src="./static/logo.png" alt="logo" class="brand-logo">
+            <a class="navbar-brand" href="#">Movees</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent col">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="" id="go-home">Home</a></li>
+            </ul>
+        </div>
+
+        <div class="logout col d-flex justify-content-end">
+            <a id="signout" href="#" onclick="signOut();" style="display: none">Sign out</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <!-- ============ LOGIN ============= -->
+        <div class="row landing-page justify-content-center">
+            <div class="brand-banner col-6">
+                <div class="banner-layer d-flex justify-content-center align-items-center">
+                    <img src="./static/logo.png" alt="">
+                </div>
+            </div>
+            <div class="user-gate col-6 d-flex flex-column align-items-center">
+                <h3 class="text-signin">Sign In</h3>
+
+                <!-- =========== SIGNIN MODAL ============= -->
+                <form class="d-flex flex-column form-signin">
+                    <input type="text" name="email" id="email" placeholder="Input your email ..." required>
+                    <input type="password" name="password" id="password" placeholder="Input your password ..." required>
+                    <button type="submit" href="" class="btn btn-primary">Sign In</button><br>
+                </form>
+                <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a>
+
+                <!-- =========== REGISTER MODAL ============= -->
+                <div class="modal signup fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form class="form-signup">
+                                <div class="modal-body d-flex flex-column">
+                                    <input type="text" placeholder="name..." required id="name-signup">
+                                    <input type="text" placeholder="email..." required id="email-signup">
+                                    <input type="password" placeholder="password..." required id="password-signup">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h4>Sign in with Google Account</h4>
+                <div class="g-signin2 signin" data-onsuccess="onSignIn"></div>
+            </div>
+        </div>
+
+        <!-- ============ HOMEPAGE ============= -->
+        <div class="row homepage" style="display: none">
+            <div class="col-8 px-0" style="background-color: #f8f8f8;">
+                <div id="carousel-movies" class="row" style="background-color: #363636;">
+
+                </div>
+                <div id="detail-movies" class="mt-4 mx-0" style="background-color: #f8f8f8;">
+
+                </div>
+            </div>
+
+            <div class="col-4" style="background-color: #efefef;">
+                <div id="list-movies" class="mt-4 mx-3">
+                    <h3>Opening This Week</h3>
+                    <ul id="popular-homepage" class="pl-4 mt-4" style="list-style-type:none">
+
+                    </ul>
+                    <button id="see-more" class="btn btn-outline-primary btn-sm mb-3">See more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <section id="popular" style="display: none">
+        <div class="container">
+            <div class="row">
+                <div class="col left-side">
+                    <h4>Moovees Charts</h4>
+                    <h1>Most Popular Movies</h1>
+                    <p>As determined by Moovees</p>
+                    <div id="box-table">
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Rank & Title</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- <div class="col-md-4 right-side">
+
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <section id="details" style="display: none">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 left-side">
+                    <div id="top-side">
+                        <div id="head-box">
+                            <div id="bookmark-icon">
+                                <i class="material-icons bookmark">bookmark</i>
+                                <i class="material-icons plus">add</i>
+                            </div>
+                            <div id="title-and-desc">
+                                <h1></h1>
+                                <p></p>
+                            </div>
+                            <div id="rating">
+                                <div id="star">
+                                    <i style="font-size: 45px; color: #e4bb24" class="material-icons">star</i>
+                                    <div id="star-detail">
+                                        <h3></h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-content d-flex align-items-center">
+                            <div id="poster" class="col-4">
+                                <div class="spinner-poster-detail spinner-grow text-light" role="status"
+                                    style="display: none">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <img id="poster-image" src="" alt="poster">
+                            </div>
+                            <div class="video-detail col-8">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bottom-side">
+                        <div class="spinner-poster-detail spinner-grow text-light" role="status" style="display: none">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 right-side">
+                    <h3 class="m-3">Recommendation</h3>
+                    <ul id="movie-rec" class="nav flex-column">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- script -->
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- google sign in -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="./js/googleSign.js"></script>
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <!-- js -->
+    <script src="./js/main.js"></script>
+    <script src="js/tmdb.js"></script>
+</body>
+
+</html>
