@@ -40,24 +40,24 @@ function showDetail(temp_id) {
       <p id="detail-desc">${res.overview}</p>
       `
       )
-      // $.ajax({
-      //     method: 'get',
-      //     url: `http://localhost:3000/youtube/search?title=${res.title}`
-      //   })
-      //   .done(movieId => {
+      $.ajax({
+          method: 'get',
+          url: `http://localhost:3000/youtube/search?title=${res.title}`
+        })
+        .done(movieId => {
 
-      //     $('.video-detail').empty().append(
-      //       `
-      //   <iframe width="420" height="315"
-      //   src="https://www.youtube.com/embed/${movieId}">
-      //   </iframe>
-      //   `
-      //     )
+          $('.video-detail').empty().append(
+            `
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/${movieId}">
+        </iframe>
+        `
+          )
 
-      //   })
-      //   .fail(err => {
-      //     console.log(err)
-      //   })
+        })
+        .fail(err => {
+          console.log(err)
+        })
     })
 }
 
@@ -211,26 +211,26 @@ $(document).ready(() => {
       for (let i = 3; i < 7; i++) {
         let movie = response[i]
 
-        // $.ajax({
-        //     method: 'get',
-        //     url: `http://localhost:3000/youtube/search?title=${movie.title}`
-        //   })
-        //   .done(movieId => {
-        //     console.log(movieId)
-        //     $('#detail-movies').append(
-        //       `<div class="p-3 border-bottom">
-        //                   <h3>${movie.title}</h3>
-        //                   <iframe width="420" height="315"
-        //                   src="https://www.youtube.com/embed/${movieId}">
-        //                   </iframe>
-        //                   <p class="mt-3 text-justify">${movie.overview}</p>
-        //                   <a href="#">See more...</a>
-        //               </div>`
-        //     )
-        //   })
-        //   .fail(err => {
-        //     console.log(err)
-        //   })
+        $.ajax({
+            method: 'get',
+            url: `http://localhost:3000/youtube/search?title=${movie.title}`
+          })
+          .done(movieId => {
+            console.log(movieId)
+            $('#detail-movies').append(
+              `<div class="p-3 border-bottom">
+                          <h3>${movie.title}</h3>
+                          <iframe width="420" height="315"
+                          src="https://www.youtube.com/embed/${movieId}">
+                          </iframe>
+                          <p class="mt-3 text-justify">${movie.overview}</p>
+                          <a href="#">See more...</a>
+                      </div>`
+            )
+          })
+          .fail(err => {
+            console.log(err)
+          })
 
       }
     })
