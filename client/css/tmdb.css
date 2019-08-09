@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  box-shadow: 0px 0px 9px 0px rgba(0,0,0,1);
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 1);
   padding: 0;
 }
 
@@ -24,7 +24,7 @@ body {
 
 #top-side h1 {
   color: white;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 #head-box {
@@ -47,7 +47,7 @@ body {
 }
 
 #bookmark-icon .bookmark {
-  font-size: 70px; 
+  font-size: 70px;
   color: #767676;
   left: 50%;
   transform: translate(-50%);
@@ -183,7 +183,8 @@ table {
   align-self: center;
 }
 
-#number-title p , #popular #star p{
+#number-title p,
+#popular #star p {
   margin: 1px 10px !important;
 }
 

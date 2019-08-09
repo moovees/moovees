@@ -44,7 +44,7 @@ function showDetail(temp_id) {
       //   })
       //   .done(movieId => {
 
-      //     $('.video-detail').append(
+      //     $('.video-detail').empty().append(
       //       `
       //   <iframe width="420" height="315"
       //   src="https://www.youtube.com/embed/${movieId}">
@@ -183,7 +183,7 @@ $(document).ready(() => {
         //   })
         //   .done(movieId => {
         //     console.log(movieId)
-        //     $('#detail-movies').append(
+        //     $('#detail-movies').empty().append(
         //       `<div class="p-3 border-bottom">
         //                   <h3>${movie.title}</h3>
         //                   <iframe width="420" height="315"
@@ -197,8 +197,6 @@ $(document).ready(() => {
         //   .fail(err => {
         //     console.log(err)
         //   })
-
-
       }
     })
     .fail(err => console.log(err))
