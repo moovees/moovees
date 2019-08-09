@@ -58,6 +58,20 @@ class TmdbController {
         console.log(err);
       })
   }
+
+  static searchMovie(req ,res, next) {
+    params.page = 1
+    params.query = req.query.query
+    axios.get('https://api.themoviedb.org/3/search/movie',{ params })
+    .then( ({data}) => {
+      res.status(200).json(data.results[0].id)
+    })
+    .catch(err=> {
+      console.log('Error')
+      next(err)
+    })
+
+  }
 }
 
 module.exports = TmdbController
