@@ -32,7 +32,10 @@ nav a {
 
 /* -------------------------------------------------------------- iframe */
 
-
+iframe {
+    width: 100%;
+    border: none;
+}
 
 /* -------------------------------------------------------------- landing page */
 
@@ -126,4 +129,10 @@ nav a {
 
 .modal-header {
     background-color: rgb(236, 216, 0);
+}
+
+.spinner-poster-detail {
+    margin: auto;
+    width: 8rem;
+    height: 8rem;
 }

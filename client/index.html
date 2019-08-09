@@ -31,12 +31,9 @@
             <a class="navbar-brand" href="#">Movees</a>
         </div>
 
-
-        <button class="btn btn-outline-primary btn-sm">Get Popular</button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent col">
             <ul class="navbar-nav mr-auto">
-                <li><a href=""></a></li>
+                <li><a href="" id="go-home">Home</a></li>
             </ul>
         </div>
 
@@ -96,145 +93,35 @@
         </div>
 
         <!-- ============ HOMEPAGE ============= -->
-        <div class="row">
-            <div class="col-8" style="background-color: #f8f8f8;">
-                <div id="carousel-movies" class="row px-2" style="background-color: #363636;">
-                    <div class="col-4 p-0 rounded-0 mx-2 my-3 image-container">
-                        <img class="card-img-top p-0 m-0 rounded-0" src="https://via.placeholder.com/300x500"
-                            alt="Card image cap">
-                        <div class="after">
-                            <a class="px-3">
-                                This is some text
-                            </a>
-                            <p class="px-3">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row px-3" style="background-color: #363636; color:#f8f8f8;">
-                    <a class="mb-2">See more...</a>
+        <div class="row homepage" style="display: none">
+            <div class="col-8 px-0" style="background-color: #f8f8f8;">
+                <div id="carousel-movies" class="row" style="background-color: #363636;">
+
                 </div>
                 <div id="detail-movies" class="mt-4 mx-0" style="background-color: #f8f8f8;">
-                    <div class="p-3 border-bottom">
-                        <h3>Film Title in Here</h3>
-                        <img class="card-img-top" src="https://via.placeholder.com/1600x900?text=video%20here"
-                            alt="movies">
-                        <p class="mt-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                            reiciendis, doloremque veritatis laudantium dolores optio ullam minus assumenda ipsum magnam
-                            modi numquam quo ratione qui fuga iure natus nihil? Explicabo?</p>
-                        <a href="#">See more...</a>
-                    </div>
-                    <div class="p-3 border-bottom">
-                        <h4>Film Title in Here</h4>
-                        <img class="card-img-top" src="https://via.placeholder.com/1600x900?text=video%20here"
-                            alt="movies">
-                        <p class="mt-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                            reiciendis, doloremque veritatis laudantium dolores optio ullam minus assumenda ipsum magnam
-                            modi numquam quo ratione qui fuga iure natus nihil? Explicabo?</p>
-                        <a href="#">See more...</a>
-                    </div>
+
                 </div>
             </div>
 
             <div class="col-4" style="background-color: #efefef;">
                 <div id="list-movies" class="mt-4 mx-3">
                     <h3>Opening This Week</h3>
-                    <ul class="pl-4 mt-4" style="list-style-type:none">
-                        <li>
-                            <a href="#">
-                                <i class="material-icons p-0 m-0">bookmark</i>
-                                Some movies
-                            </a>
-                        </li>
+                    <ul id="popular-homepage" class="pl-4 mt-4" style="list-style-type:none">
+
                     </ul>
-
-
-    </div> -->
-
-
-
-	<section id="popular">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 left-side">
-					<h4>Moovees Charts</h4>
-					<h1>Most Popular Movies</h1>
-					<p>As determined by Moovees</p>
-					<div id="box-table">
-
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Rank & Title</th>
-									<th>Rating</th>
-								</tr>
-							</thead>
-							<tbody>
-									
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<div class="col-md-4 right-side">
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-		<section id="details">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 left-side">
-						<div id="top-side">
-							<div id="head-box">
-								<div id="bookmark-icon">
-									<i class="material-icons bookmark">bookmark</i>
-									<i class="material-icons plus">add</i>
-								</div>
-								<div id="title-and-desc">
-									<h1></h1>
-									<p></p>
-								</div>
-								<div id="rating">
-									<div id="star">
-										<i style="font-size: 45px; color: #e4bb24" class="material-icons">star</i>
-										<div id="star-detail">
-											<h3></h3>
-											<p></p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div id="poster">
-								<img src="" alt="poster">
-							</div>
-						</div>
-						<div id="bottom-side">
-
-						</div>
-					</div>
-					<div class="col-md-4 right-side">
-
-					</div>
-				</div>
-			</div>
-
-		</section>
-
+                    <button id="see-more" class="btn btn-outline-primary btn-sm">See more</button>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
 
 
-    <section id="popular">
+    <section id="popular" style="display: none">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 left-side">
+                <div class="col left-side">
                     <h4>Moovees Charts</h4>
                     <h1>Most Popular Movies</h1>
                     <p>As determined by Moovees</p>
@@ -253,15 +140,15 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-md-4 right-side">
+                <!-- <div class="col-md-4 right-side">
 
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
 
-    <section id="details">
+    <section id="details" style="display: none">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 left-side">
@@ -285,12 +172,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="poster">
-                            <img src="" alt="poster">
+                        <div class="detail-content d-flex align-items-center">
+                            <div id="poster" class="col-4">
+                                <div class="spinner-poster-detail spinner-grow text-light" role="status"
+                                    style="display: none">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <img id="poster-image" src="" alt="poster">
+                            </div>
+                            <div class="video-detail col-8">
+
+                            </div>
                         </div>
                     </div>
                     <div id="bottom-side">
-
+                        <div class="spinner-poster-detail spinner-grow text-light" role="status" style="display: none">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 right-side">
