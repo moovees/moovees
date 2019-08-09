@@ -1,5 +1,11 @@
-# moovees
-project
+# Moovees
+
+Hacktiv8's week 2 group project
+
+All the endpoints API can be access from:
+```jacascript
+http://localhost:3000
+```
 
 ## Users
 + ### Sign Up
