@@ -10,12 +10,14 @@
         content="800616839115-v04olo2jcipsoicrkasli0lpd603qnsn.apps.googleusercontent.com">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/tmdb.css" type="text/css">
     <title>APPS</title>
 </head>
@@ -23,13 +25,14 @@
 <body>
 
     <!-- =========== NAVBAR ============ -->
-    <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between fixed-top">
         <div class="brander d-flex col-2 align-items-center col">
-            <img src="./static/react.svg" alt="logo" class="brand-logo">
-            <a class="navbar-brand" href="#">My Apps</a>
-				</div>
-				
-				<button class="btn btn-outline-primary btn-sm">Get Popular</button>
+            <img src="./static/logo.png" alt="logo" class="brand-logo">
+            <a class="navbar-brand" href="#">Movees</a>
+        </div>
+
+
+        <button class="btn btn-outline-primary btn-sm">Get Popular</button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent col">
             <ul class="navbar-nav mr-auto">
@@ -37,27 +40,32 @@
             </ul>
         </div>
 
-        <div class="logout col">
+        <div class="logout col d-flex justify-content-end">
             <a id="signout" href="#" onclick="signOut();" style="display: none">Sign out</a>
         </div>
     </nav>
 
-    <!-- <div class="container-fluid"> -->
+    <div class="container-fluid">
         <!-- ============ LOGIN ============= -->
-        <!-- <div class="row landing-page justify-content-center">
-            <div class="brand-banner col-6">brand</div>
+        <div class="row landing-page justify-content-center">
+            <div class="brand-banner col-6">
+                <div class="banner-layer d-flex justify-content-center align-items-center">
+                    <img src="./static/logo.png" alt="">
+                </div>
+            </div>
             <div class="user-gate col-6 d-flex flex-column align-items-center">
-                <h1 class="welcome-register">My APPS</h1>
                 <h3 class="text-signin">Sign In</h3>
+
+                <!-- =========== SIGNIN MODAL ============= -->
                 <form class="d-flex flex-column form-signin">
-                    <input type="text" name="email" id="email" placeholder="Input your email" required>
-                    <input type="password" name="password" id="password" placeholder="Input your password" required>
+                    <input type="text" name="email" id="email" placeholder="Input your email ..." required>
+                    <input type="password" name="password" id="password" placeholder="Input your password ..." required>
                     <button type="submit" href="" class="btn btn-primary">Sign In</button><br>
                 </form>
-                <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a> -->
+                <a href="" data-toggle="modal" data-target="#exampleModal">Didnt have an account?</a>
 
                 <!-- =========== REGISTER MODAL ============= -->
-                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                <div class="modal signup fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -69,9 +77,9 @@
                             </div>
                             <form class="form-signup">
                                 <div class="modal-body d-flex flex-column">
-                                    <input type="text" placeholder="name..." required>
-                                    <input type="text" placeholder="email..." required>
-                                    <input type="password" placeholder="password..." required>
+                                    <input type="text" placeholder="name..." required id="name-signup">
+                                    <input type="text" placeholder="email..." required id="email-signup">
+                                    <input type="password" placeholder="password..." required id="password-signup">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -87,6 +95,59 @@
             </div>
         </div>
 
+        <!-- ============ HOMEPAGE ============= -->
+        <div class="row">
+            <div class="col-8" style="background-color: #f8f8f8;">
+                <div id="carousel-movies" class="row px-2" style="background-color: #363636;">
+                    <div class="col-4 p-0 rounded-0 mx-2 my-3 image-container">
+                        <img class="card-img-top p-0 m-0 rounded-0" src="https://via.placeholder.com/300x500"
+                            alt="Card image cap">
+                        <div class="after">
+                            <a class="px-3">
+                                This is some text
+                            </a>
+                            <p class="px-3">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-3" style="background-color: #363636; color:#f8f8f8;">
+                    <a class="mb-2">See more...</a>
+                </div>
+                <div id="detail-movies" class="mt-4 mx-0" style="background-color: #f8f8f8;">
+                    <div class="p-3 border-bottom">
+                        <h3>Film Title in Here</h3>
+                        <img class="card-img-top" src="https://via.placeholder.com/1600x900?text=video%20here"
+                            alt="movies">
+                        <p class="mt-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                            reiciendis, doloremque veritatis laudantium dolores optio ullam minus assumenda ipsum magnam
+                            modi numquam quo ratione qui fuga iure natus nihil? Explicabo?</p>
+                        <a href="#">See more...</a>
+                    </div>
+                    <div class="p-3 border-bottom">
+                        <h4>Film Title in Here</h4>
+                        <img class="card-img-top" src="https://via.placeholder.com/1600x900?text=video%20here"
+                            alt="movies">
+                        <p class="mt-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                            reiciendis, doloremque veritatis laudantium dolores optio ullam minus assumenda ipsum magnam
+                            modi numquam quo ratione qui fuga iure natus nihil? Explicabo?</p>
+                        <a href="#">See more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4" style="background-color: #efefef;">
+                <div id="list-movies" class="mt-4 mx-3">
+                    <h3>Opening This Week</h3>
+                    <ul class="pl-4 mt-4" style="list-style-type:none">
+                        <li>
+                            <a href="#">
+                                <i class="material-icons p-0 m-0">bookmark</i>
+                                Some movies
+                            </a>
+                        </li>
+                    </ul>
 
 
     </div> -->
@@ -163,22 +224,95 @@
 
 		</section>
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="popular">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 left-side">
+                    <h4>Moovees Charts</h4>
+                    <h1>Most Popular Movies</h1>
+                    <p>As determined by Moovees</p>
+                    <div id="box-table">
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Rank & Title</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-4 right-side">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 left-side">
+                    <div id="top-side">
+                        <div id="head-box">
+                            <div id="bookmark-icon">
+                                <i class="material-icons bookmark">bookmark</i>
+                                <i class="material-icons plus">add</i>
+                            </div>
+                            <div id="title-and-desc">
+                                <h1></h1>
+                                <p></p>
+                            </div>
+                            <div id="rating">
+                                <div id="star">
+                                    <i style="font-size: 45px; color: #e4bb24" class="material-icons">star</i>
+                                    <div id="star-detail">
+                                        <h3></h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="poster">
+                            <img src="" alt="poster">
+                        </div>
+                    </div>
+                    <div id="bottom-side">
+
+                    </div>
+                </div>
+                <div class="col-md-4 right-side">
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
     <!-- script -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- google sign in -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="./js/googleSign.js"></script>

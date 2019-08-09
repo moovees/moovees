@@ -1,6 +1,8 @@
 const User = require('../models/user')
 const axios = require('axios')
 const jwt = require('../helpers/jwt')
+const bcrypt = require('../helpers/bcrypt')
+
 const {
     OAuth2Client
 } = require('google-auth-library')
@@ -50,6 +52,51 @@ class UserController {
             .catch(next)
     }
 
+    static signin(req, res, next) {
+        User.findOne({
+                email: req.body.email
+            })
+            .then(user => {
+                if (user) {
+                    let check = bcrypt.compareHash(req.body.password, user.password)
+                    if (check) {
+                        let payload = {
+                            id: user._id,
+                            name: user.name,
+                            email: user.email
+                        }
+                        let token = jwt.signToken(payload)
+                        res.status(200).json(token)
+                    } else {
+                        next({
+                            code: 404,
+                            message: 'Invalid username / password.'
+                        })
+                    }
+                } else {
+                    next({
+                        code: 404,
+                        message: 'Invalid username / password.'
+                    })
+                }
+            })
+            .catch(next)
+    }
+
+    static signup(req, res, next) {
+
+        let data = {
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password
+        }
+
+        User.create(data)
+            .then(user => {
+                res.status(201).json(user)
+            })
+            .catch(next)
+    }
 }
 
 module.exports = UserController
