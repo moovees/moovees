@@ -1,9 +1,12 @@
+
+
 #carousel-movies a {
-    font-size: 15px;
+    font-size: 0.7vw;
+    font-weight: 800;
 }
 
 #carousel-movies p {
-    font-size: 11px;
+    font-size: 0.7vw;
 }
 
 

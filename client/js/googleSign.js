@@ -19,6 +19,9 @@ function onSignIn(googleUser) {
             }
             localStorage.setItem('token', response.token)
             $('#signout').show()
+            $('.homepage').show()
+
+            $('.landing-page').hide()
         })
         .fail((err) => {
             console.log(err)
@@ -48,6 +51,9 @@ function signOut() {
                 console.log('User signed out.');
             });
 
+            $('.landing-page').show()
+
+            $('.homepage').hide()
             $('#signout').hide()
 
             localStorage.clear()

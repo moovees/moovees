@@ -2,6 +2,8 @@ if (process.env.NODE_ENV == 'development') {
     require('dotenv').config()
 }
 
+// console.log(process.env.TMDB_API_KEY)
+
 const express = require('express');
 const app = express();
 const port = 3000;

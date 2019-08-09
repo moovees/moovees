@@ -4,13 +4,16 @@ $(document).ready(function () {
 
     signin()
     register()
+    goHome()
 
 })
 
 if (localStorage.getItem('token')) {
 
     $('#signout').show()
+    $('.homepage').show()
 
+    $('.landing-page').hide()
 }
 
 function signin() {
@@ -35,6 +38,9 @@ function signin() {
                 localStorage.setItem('token', response)
 
                 $('#signout').show()
+                $('.homepage').show()
+
+                $('.landing-page').hide()
 
                 Swal.fire({
                     type: 'success',
@@ -90,4 +96,15 @@ function register() {
             })
     })
 
+}
+
+function goHome() {
+    $('#go-home').click(function() {
+        event.preventDefault()
+
+        $('.homepage').show()
+        
+        $('#details').hide()
+
+    })
 }

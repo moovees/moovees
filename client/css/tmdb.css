@@ -192,3 +192,9 @@ table {
   display: flex;
   align-items: center;
 }
+
+#bottom-side {
+  padding: 40px;
+  text-align: justify;
+  text-indent: 50px;
+}
