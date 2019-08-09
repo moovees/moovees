@@ -121,3 +121,74 @@ body {
   background-color: #fff;
   height: 500px;
 }
+
+#popular .left-side {
+  background-color: #f8f8f8;
+}
+
+#popular .left-side h4 {
+  font-size: 1.2vw;
+  font-weight: 300;
+  margin: 20px 20px 10px;
+}
+
+#popular .left-side h1 {
+  font-size: 2.3vw;
+  font-weight: 400;
+  margin: 0 20px;
+}
+
+#popular .left-side p {
+  color: #777777;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 20px;
+}
+
+#popular table {
+  margin: 10px 0 0 10px;
+}
+
+#popular #thumbnail {
+  height: 80px;
+}
+
+#popular #thumbnail img {
+  height: 100%;
+}
+
+#box-table {
+  margin: 10px;
+}
+
+table td {
+  padding: 0 !important;
+}
+
+table {
+  margin: 0 !important;
+}
+
+#popular #rank-title {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#number-title {
+  line-height: 10px;
+  display: flex;
+  position: absolute;
+  left: 70px;
+  align-self: center;
+}
+
+#number-title p , #popular #star p{
+  margin: 1px 10px !important;
+}
+
+#star {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
